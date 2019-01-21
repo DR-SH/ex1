@@ -1,0 +1,338 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+	#about
+		.about-1
+			height: 400px
+			.about-carousel		
+				.owl-carousel		
+					.owl-stage-outer
+						.owl-item
+							height: 320px
+							.inner-carousel
+								border: 5px solid #cecece
+								border-top: 30px solid #cecece
+								border-radius: 10px	
+								height: 300px
+	#clients					
+		#clients-wrapper
+			#clients-range	
+				.clients-span
+					width: 192px
+					padding-top: 10px
+					font-weight: 800	
+					font-size: 1.2em	
+				#clients-range-outer
+					padding-right: 120px
+					padding-left: 200px	
+			#clients-carousel
+				.owl-carousel
+					.owl-nav
+						top: -70px
+						.owl-prev, .owl-next
+							span					
+								padding: 0 15px
+								font-size: 1.65em
+								line-height: 1.4em
+						.owl-next
+							margin-left: 12px
+	footer	
+		padding-bottom: 70px	
+		.footer-title
+			margin-bottom: 1.2rem		
+		#footer-contacts
+			.logotip
+				justify-content: flex-start
+			#footer-contacts-text
+			#footer-contacts-contacts
+				padding-bottom: 0px
+				text-align: left
+				p
+		.footer-menu
+			.footer-menu-title	
+				text-align: left
+				font-size: 1.4rem			
+			.smallMenu
+		#footer-blog
+
+
+
+
+
+			
+// ≤768px
++media-breakpoint-up(md)
+	/*HEADER*/
+	header
+		.navbar
+			padding-top: 10px
+	.logotip
+		a
+			.logo
+				font-size: 2.5em					
+	#home
+		height: 550px
+		.home-slider-wrapper
+			.owl-carousel		
+				.inner-carousel
+					height: 500px
+					.inner-carousel-text
+						width: 650px
+						.h1
+							margin: 0 auto 10px
+							a
+								color: #b0b8b9
+								background-color: $redd
+								padding-left: 8px
+								padding-right: 8px
+								text-decoration: none
+								font-weight: 800
+								font-size: 2.2em
+								&:hover
+									transition: .4s ease
+									font-size: 2.4em
+									background-color: $redl
+						p	
+							background-color: #3f4646
+							font-size: 1em
+							color: #fff
+							padding:
+								right: 10px
+								left: 10px
+								top: 5px
+				.owl-nav
+					.owl-prev, .owl-next
+						display: block
+						width: 50px
+						height: 60px					
+						top: 45%
+						font-size: 2.5em
+						
+						&:hover
+							width: 60px
+							padding-right: 10px	
+						i
+							line-height: 60px
+					.owl-prev	
+						left: -5px	
+						border-top-right-radius: 10px
+						border-bottom-right-radius: 10px
+					.owl-next
+						right: -5px
+						border-top-left-radius: 10px
+						border-bottom-left-radius: 10px	
+	#services
+		margin-top: 50px
+	#about	
+		.about-1	
+			height: 400px	
+			.about-title
+				margin-bottom: 10px
+				margin-top: 20px
+				.about-title-inner
+					.about-title-b
+						font-size: 3em
+					.about-title-l
+			.about-carousel
+				height: 500px
+				margin-top: 0	
+				.owl-carousel		
+					.owl-stage-outer
+						.owl-stage
+							display: flex
+							align-items: flex-end	
+							.owl-item
+								height: 320px
+								float: none;
+								display: inline-block;
+								margin-bottom: 25px
+								padding-top: 25px
+								transform: scale(0.9)
+								transition: 1s ease	
+								.inner-carousel
+									border-top: 30px solid #cecece
+									border-radius: 10px	
+									height: 250px
+									position: reative
+									&:hover
+										border-color: #aaa	
+										
+
+							.center, .cur
+								transform: scale(1.2)				
+								z-index: 2
+								.inner-carousel
+									
+									border-top: 25px solid #cecece
+									border-radius: 9px
+									margin-bottom: 20px	
+									&:after
+										position: absolute
+										width: 100%
+										height: 90%
+										border-radius: 10px / 100px
+										z-index: -1
+										top: 0
+										content: ""
+										box-shadow: 10px 0 5px 3px rgba(#000, .5)
+									&:before
+										position: absolute
+										width: 100%
+										height: 90%
+										border-radius: 10px / 100px
+										z-index: -1
+										top: 0
+										content: ""
+										box-shadow: -10px 0 5px 3px rgba(#000, .5)	
+							.center	 
+								
+				.owl-dots
+					display: none
+		.about-2
+			margin-top: 190px					
+			.row
+				text-align: left
+
+
+	footer
+		padding-bottom: 80px		
+		.footer-title
+			margin-bottom: 1.2rem				
+		#footer-contacts
+			.logotip
+			#footer-contacts-text
+				
+			#footer-contacts-contacts
+				p
+					span
+						font-size: 1.5rem
+		.footer-menu
+			.footer-menu-title	
+				font-size: 1.6rem
+			.smallMenu
+				ul
+					padding-left: 20px
+					text-align: left
+		#footer-blog				
+					
+// ≤992px
++media-breakpoint-up(lg)
+	/*HEADER*/
+	header
+		.navbar
+		
+			#navbarNavDropdown	
+				.navbar-nav
+					li
+						padding-right: 10px
+					.dropdown
+						.dropdown-menu						
+							left: 8px !important
+							background-color: #e2534b
+							
+							li
+								padding-right: 0
+								padding-bottom: 2px
+
+							>.dropdown
+								>a
+									&::before
+
+										background-image: url(../img/chevron-right.png)
+								
+									&::after
+										content: ''
+										width: 10px
+										height: 10px
+										display: inline-block
+										position: absolute
+										right: 10px 
+										top: 12px
+										margin-left: 15px
+										background-image: url(../img/chevron-right.png)
+										background-size: cover	
+									span
+										display: none								
+								.dropdown-menu
+									border: 1px solid rgba(0, 0, 0, .15)
+									margin-left: 5px
+									padding: 8px
+
+					>.dropdown			
+						> .dropdown-menu	
+							margin-top: 5px !important
+							left: 0 !important
+							&::before /* triangle - only for desktops */
+								position: absolute
+								display: inline-block
+								top: -7px
+								left: 19px
+								border-right: 7px solid transparent
+								border-bottom: 7px solid #CCC
+								border-left: 7px solid transparent
+								border-bottom-color: rgba(0, 0, 0, 0.2)
+								content: ''
+							&::after
+								position: absolute
+								top: -6px
+								left: 20px
+								display: inline-block
+								border-right: 6px solid transparent
+								border-bottom: 6px solid #e2534b
+								border-left: 6px solid transparent
+								content: ''	
+					.nav-search	
+						display: list-item
+						a
+							&::before
+								display: none
+							&::after
+								display: none
+						.dropdown-menu			
+							&::before
+								display: none
+							&::after
+								display: none	
+					.nav-mobile-search
+						display: none
+				
+	/*INTRO*/
+	
+	#intro
+		.row
+			.intro-text
+				.h3
+					text-align: left
+			.intro-button	
+				#intro-but			
+					font-size: 1.4em						
+											
+	footer
+		padding-bottom: 90px		
+		.footer-title
+			margin-bottom: 1.5rem							
+		#footer-contacts
+			.logotip
+			#footer-contacts-text
+				display: block
+// ≤1200px
++media-breakpoint-up(xl)
