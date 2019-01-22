@@ -1,5 +1,11 @@
 $(function() {
-
+	
+// pre-loading	
+    $preloader = $('#loader'),
+    $loader = $preloader.find('.load');
+    $loader.fadeOut('fast');
+    $preloader.fadeOut('fast');
+	$('#wrapper').show();
 //	nav menu settings
 	$('ul .nav').smartmenus({
 		subMenusSubOffsetX: 1,
@@ -11,8 +17,8 @@ $(function() {
 	$('#home .owl-carousel').owlCarousel({
 		loop: true,
 		autoplay: true,
-		autoplayTimeout: 4000,
-		autoplaySpeed: 1000,
+		autoplayTimeout: 8000,
+		autoplaySpeed: 500,
 		navSpeed: 500,
 		dotsSpeed: 500,
 		items: 1,
@@ -36,7 +42,7 @@ $(function() {
 		let item      = event.item.index;     // Position of the current item		
 		let current = $(this).find('.owl-item:eq('+item+')');
 		current.siblings().find('.inner-carousel-text').hide();
-		current.find('.inner-carousel-text').slideDown(1000);	
+		current.find('.inner-carousel-text').fadeIn(1300);	
 	});
 	
 
