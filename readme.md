@@ -12,9 +12,9 @@
 <p>Макет проверен на кроссбраузерность</p>
 <p>В работе использованы плагины:</p>
 <ul>
-	<li><b>OwlCarousel 2</b> <https://github.com/OwlCarousel2/OwlCarousel2> - слайдеры и карусели</li>
-	<li><b>Circliful</b> <https://github.com/pguso/jquery-plugin-circliful> - диаграмма(half-circle)</li>
-	<li><b>SmartMenus</b> <https://github.com/vadikom/smartmenus> - навигационное меню</li>
-	<li><b>ionRangeslider</b> <https://github.com/IonDen/ion.rangeSlider> - ползунок</li>
+	<li><b>OwlCarousel 2</b> https://github.com/OwlCarousel2/OwlCarousel2 - слайдеры и карусели</li>
+	<li><b>Circliful</b> https://github.com/pguso/jquery-plugin-circliful - диаграмма(half-circle)</li>
+	<li><b>SmartMenus</b> https://github.com/vadikom/smartmenus - навигационное меню</li>
+	<li><b>ionRangeslider</b> https://github.com/IonDen/ion.rangeSlider - ползунок</li>
 </ul>	
-<p>В качестве стартового шаблона использован OptimizedHTML-4 <https://github.com/agragregra/OptimizedHTML-4></p>
+<p>В качестве стартового шаблона использован OptimizedHTML-4 https://github.com/agragregra/OptimizedHTML-4</p>
