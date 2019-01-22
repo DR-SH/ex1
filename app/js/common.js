@@ -39,24 +39,24 @@ $(function() {
 	$('#home .owl-carousel .active').find('.inner-carousel-text').css('display', 'block');
 	
 	$('#home .owl-carousel').on('changed.owl.carousel', function(event) {
-		let item      = event.item.index;     // Position of the current item		
-		let current = $(this).find('.owl-item:eq('+item+')');
-		current.siblings().find('.inner-carousel-text').hide();
-		current.find('.inner-carousel-text').fadeIn(1300);	
+		var $item = event.item.index;     // Position of the current item		
+		var $current = $(this).find('.owl-item:eq('+$item+')');
+		$current.siblings().find('.inner-carousel-text').hide();
+		$current.find('.inner-carousel-text').fadeIn(1300);	
 	});
 	
 
 //	services section
 	//rotating icon & scale
 	$('.services-bg').bind('mouseenter', function(e){
-		let icon = $(this).find('.services-icon');
-		let rotat = 0;
-		if(typeof icon.attr('style') !== "undefined"){
-			rotat = icon.attr('style').replace(/[^-\d\.]/g, '');
+		var $icon = $(this).find('.services-icon');
+		var $rotat = 0;
+		if(typeof $icon.attr('style') !== "undefined"){
+			$rotat = $icon.attr('style').replace(/[^-\d\.]/g, '');
 		}
-		rotat=parseInt(rotat);
-		rotat+=360;
-		icon.attr('style', 'transform: rotate('+rotat+'deg)');
+		$rotat=parseInt($rotat);
+		$rotat+=360;
+		$icon.attr('style', 'transform: rotate('+$rotat+'deg)');
 		$(this).attr('style', 'transform: scale(1.05)');
 	});
 	
@@ -114,15 +114,15 @@ $(function() {
 	//плавное уменьшение последнего элемента в карусели #about
 	
 	$('#about .owl-carousel').on('changed.owl.carousel', function(event) {
-		let pages  = event.page.count; 
-		let page  = event.page.index;     
-		console.log(pages - page);	
-		let current = $(this).find('.owl-item:eq(2)');
-		if((pages-page) == 1){			
-			current.addClass('cur');
+		var $pages  = event.page.count; 
+		var $page  = event.page.index;     
+		console.log($pages - $page);	
+		var $current = $(this).find('.owl-item:eq(2)');
+		if(($pages-$page) == 1){			
+			$current.addClass('cur');
 		}
 		else{
-			current.removeClass('cur');
+			$current.removeClass('cur');
 		}
 	});	
 
@@ -206,13 +206,13 @@ $(function() {
 ///// user carousel and range-slider
 
 
-	let rOwl = $('#clients-carousel .owl-carousel');
+	var rOwl = $('#clients-carousel .owl-carousel');
 	
-	let rOwlAmount = rOwl.find('.inner-carousel').length;  //общее количество элементов в карусели
+	var rOwlAmount = rOwl.find('.inner-carousel').length;  //общее количество элементов в карусели
 	
 	 // определение количества элементов на одной странице в карусели в зависимостии от ширины экрана
 	 
-	let res = function(){  
+	var res = function(){  
 		if($( window ).width() > 768){
 			return 6;
 		}
@@ -221,7 +221,7 @@ $(function() {
 		}	
 	};	
 	
-	let winWid = res(); // winWid - текущее кол-во эл-тов на странице
+	var winWid = res(); // winWid - текущее кол-во эл-тов на странице
 	
 	$( window ).resize(function(){
 		winWid = res();
@@ -255,7 +255,7 @@ $(function() {
 	});	
 	
 	//range
-	let flag = true;
+	var flag = true;
     $(".js-range-slider").ionRangeSlider({
         type: "single",
 		skin: "round",
@@ -280,17 +280,17 @@ $(function() {
 	
 	//changing range after carousel changed
 	
-	let changeRange = function(){
+	var changeRange = function(){
 		rOwl.on('changed.owl.carousel', function(event) {
 			if (!flag) return;
-			let item0  = event.item.index;
-			let item = item0 + 1 - rOwlAmount/2;	
+			var item0  = event.item.index;
+			var item = item0 + 1 - rOwlAmount/2;	
 			if (item<1){
 				item = rOwlAmount;
 			}		
-			let currentPage = Math.ceil(item/winWid);
+			var currentPage = Math.ceil(item/winWid);
 			//console.log(item0 + ' ' + item + ' ' + winWid + ' ' + currentPage);	
-			let range = $(".js-range-slider").data("ionRangeSlider");
+			var range = $(".js-range-slider").data("ionRangeSlider");
 			range.update({
 				//from: currentPage
 				from: item

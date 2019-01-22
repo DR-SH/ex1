@@ -91,7 +91,7 @@ gulp.task('construct', function(){
 	.pipe(uglify())
 	.pipe(gulp.dest('dist/js'));
 	
-	let buildCSS = gulp.src(['app/css/lib.min.css', 'app/css/main.min.css'])
+	let buildCSS = gulp.src(['app/css/main.min.css'])
 	.pipe(gulp.dest('dist/css'));
 	
 	let buildFonts =  gulp.src('app/fonts/**/*')

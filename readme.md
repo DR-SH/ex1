@@ -17,3 +17,4 @@
 	<li><b>SmartMenus</b> <https://github.com/vadikom/smartmenus> - навигационное меню</li>
 	<li><b>ionRangeslider</b> <https://github.com/IonDen/ion.rangeSlider> - ползунок</li>
 </ul>	
+<p>В качестве стартового шаблона использован OptimizedHTML-4 <https://github.com/agragregra/OptimizedHTML-4></p>
