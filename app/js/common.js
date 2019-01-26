@@ -210,7 +210,7 @@ $(function() {
 	
 	var rOwlAmount = rOwl.find('.inner-carousel').length;  //общее количество элементов в карусели
 	
-	 // определение количества элементов на одной странице в карусели в зависимостии от ширины экрана
+// определение количества элементов на одной странице в карусели в зависимостии от ширины экрана
 	 
 	var res = function(){  
 		if($( window ).width() > 768){
@@ -287,7 +287,10 @@ $(function() {
 			var item = item0 + 1 - rOwlAmount/2;	
 			if (item<1){
 				item = rOwlAmount;
-			}		
+			}	
+			if (item>rOwlAmount){
+				item =1;
+			}				
 			var currentPage = Math.ceil(item/winWid);
 			//console.log(item0 + ' ' + item + ' ' + winWid + ' ' + currentPage);	
 			var range = $(".js-range-slider").data("ionRangeSlider");
